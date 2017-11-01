@@ -24,8 +24,8 @@ public class Chatbot
 		this.shoppingList = new ArrayList<String>();
 		this.cuteAnimalMemes = null;
 		this.currentTime = null;
-		this.questions = null;
-		this.username = null;
+		this.questions = new String [10];
+		this.username = username;
 		this.content = null;
 		this.intro = null;
 		this.currentTime = null;
@@ -34,6 +34,9 @@ public class Chatbot
 		this.followUps = new String [5];
 		
 		buildVerbs();
+		buildTopics();
+		buildFollowups();
+		buildQuestions();
 		buildShoppingList();
 	}
 
@@ -72,6 +75,7 @@ public class Chatbot
 	{
 		String chatbotResponse = "";
 		chatbotResponse += "You said;" + "\n" + input + "\n";
+		
 		chatbotResponse += buildChatbotResponse();
 		
 		return chatbotResponse;
