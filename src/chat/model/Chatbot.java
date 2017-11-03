@@ -47,6 +47,7 @@ public class Chatbot
 		verbs[2] = "ambivalend about";
 		verbs[3] = "am thinking about";
 	}
+	
 	private void buildMovieList()
 	{
 		
