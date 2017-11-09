@@ -72,6 +72,11 @@ public class Chatbot
 		
 	}
 	
+	/**
+	 * Combines user input anchatbot string into one string and returns it.
+	 * @param input The user's sipplied text.
+	 * @return the combined user input and chatbot response
+	 */
 	public String processConversation(String input)
 	{
 		String chatbotResponse = "";
@@ -82,6 +87,10 @@ public class Chatbot
 		return chatbotResponse;
 	}
 	
+	/**
+	 * Builds a random response using the chatbot's sentence part arrays.
+	 * @return the random response of the chatbot.
+	 */
 	private String buildChatbotResponse()
 	{
 		String response = "I ";
@@ -132,6 +141,10 @@ public class Chatbot
 	
 	public boolean shoppingListChecker(String shoppingItem)
 	{
+		for (String item: shoppingList)
+		{
+			if (shoppingitem)
+		}
 		return false;
 	}
 	
