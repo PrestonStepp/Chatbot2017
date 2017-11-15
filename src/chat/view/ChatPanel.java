@@ -21,12 +21,13 @@ public class ChatPanel extends JPanel
 		super();
 		this.appController = appController;
 		
-		
 		//Imotoalize GUI data members
 		chatButton = new JButton("chat");
 		chatArea = new JTextArea(10, 25);
 		inputField = new JTextField(25);
 		appLayout = new SpringLayout();
+		
+		
 		
 		setupPanel();
 		setupLayout();
