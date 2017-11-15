@@ -6,7 +6,7 @@ import javax.swing.JTextField;
 import javax.swing.JTextArea;
 import javax.swing.SpringLayout;
 
-import chat.contoller.ChatbotController;
+import chat.controller.ChatbotController;
 
 import java.awt.Color;
 
@@ -28,6 +28,10 @@ public class ChatPanel extends JPanel
 		chatArea = new JTextArea(10, 25);
 		inputField = new JTextField(25);
 		appLayout = new SpringLayout();
+		appLayout.putConstraint(SpringLayout.NORTH, chatArea, 6, SpringLayout.SOUTH, inputField);
+		appLayout.putConstraint(SpringLayout.WEST, chatArea, 10, SpringLayout.WEST, this);
+		appLayout.putConstraint(SpringLayout.NORTH, inputField, 0, SpringLayout.NORTH, this);
+		appLayout.putConstraint(SpringLayout.EAST, inputField, 0, SpringLayout.EAST, chatArea);
 		
 		
 		

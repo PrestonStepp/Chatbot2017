@@ -34,8 +34,8 @@ public class Chatbot
 		this.followUps = new String [5];
 		
 		buildVerbs();
-		buildTopics();
-		buildFollowups();
+//		buildTopics();
+//		buildFollowups();
 		buildQuestions();
 		buildShoppingList();
 	}

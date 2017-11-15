@@ -4,7 +4,7 @@ public class ChatRunner
 {
 	public static void main (String [] args)
 	{
-		ChatbotController myApp = new ChabotController();
+		ChatbotController myApp = new ChatbotController();
 		myApp.start();
 	}
 }
