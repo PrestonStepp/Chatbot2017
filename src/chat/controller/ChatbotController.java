@@ -7,7 +7,7 @@ import chat.view.ChatFrame;
 public class ChatbotController
 { 
 	private Chatbot chatbot;
-	private PopupDisplay displ;
+	private PopupDisplay display;
 	private ChatFrame appFrame;
 	
 	public ChatbotController()
@@ -15,6 +15,6 @@ public class ChatbotController
 		chatbot = new Chatbot("Preston Stepp");
 		
 		display = new PopupDisplay();
-		appFrame = new ChaFrame(this);
+		appFrame = new ChatFrame(this);
 	}
 }
