@@ -73,7 +73,7 @@ public class Chatbot
 	}
 	
 	/**
-	 * Combines user input anchatbot string into one string and returns it.
+	 * Combines user input and chatbot string into one string and returns it.
 	 * @param input The user's sipplied text.
 	 * @return the combined user input and chatbot response
 	 */
