@@ -20,4 +20,19 @@ public class ChatPanel extends JPanel
 	{
 		
 	}
+	
+	private void setupPanel()
+	{
+		
+	}
+	
+	private void setupLayout()
+	{
+		
+	}
+	
+	private void setupListeners()
+	{
+		
+	}
 }
