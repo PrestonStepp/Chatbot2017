@@ -1,8 +1,8 @@
 package chat.controller;
 
 import chat.model.Chatbot;
-import chat.view.PopupDisplay;
 import chat.view.ChatFrame;
+import chat.view.PopupDisplay;
 
 public class ChatbotController
 { 
@@ -13,8 +13,13 @@ public class ChatbotController
 	public ChatbotController()
 	{
 		chatbot = new Chatbot("Preston Stepp");
-		
+		//View initialized after Model
 		display = new PopupDisplay();
 		appFrame = new ChatFrame(this);
+	}
+	
+	public void start()
+	{
+		
 	}
 }

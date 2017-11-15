@@ -8,6 +8,8 @@ import javax.swing.SpringLayout;
 
 import chat.contoller.ChatbotController;
 
+import java.awt.Color;
+
 public class ChatPanel extends JPanel
 {
 	private ChatbotController appController;
@@ -36,7 +38,10 @@ public class ChatPanel extends JPanel
 	
 	private void setupPanel()
 	{
-		
+		this.setBackground(Color.CYAN);
+		this.setLayout(appLayout);
+		this.add(inputField);
+		this.add(chatArea);
 	}
 	
 	private void setupLayout()
