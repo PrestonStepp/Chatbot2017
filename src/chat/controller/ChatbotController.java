@@ -33,6 +33,8 @@ public class ChatbotController
 	{
 		String chatbotSays = "";
 		
+		chatbot.processConversation(input);
+		
 		return chatbotSays;
 	}
 }
