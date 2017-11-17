@@ -28,4 +28,12 @@ public class ChatbotController
 			response = display.collectResponse(response);
 		}
 	}
+	
+	public String interactWithChatbot(String input)
+	{
+		String chatbotSays = "";
+		
+		return chatbotSays;
+	}
 }
+
