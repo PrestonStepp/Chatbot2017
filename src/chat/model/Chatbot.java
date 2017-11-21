@@ -143,7 +143,7 @@ public class Chatbot
 	{
 		for (String item: shoppingList)
 		{
-			if (shoppingitem)
+	//		if (shoppingitem)
 		}
 		return false;
 	}
