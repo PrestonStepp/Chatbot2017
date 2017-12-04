@@ -11,6 +11,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 //Need import for scrollpane
 import javax.swing.JScrollPane;
+import javax.swing.JLabel;
 
 public class ChatPanel extends JPanel
 {
@@ -32,10 +33,13 @@ public class ChatPanel extends JPanel
 
 		// Initialize GUI data members
 		chatButton = new JButton("chat");
-		chatArea = new JTextArea(10, 25);
 		inputField = new JTextField(25);
 		infoLabel = new JLabel("Type to chat with the chatbot");
 		appLayout = new SpringLayout();
+		appLayout.putConstraint(SpringLayout.NORTH, inputField, 0, SpringLayout.NORTH, chatButton);
+		appLayout.putConstraint(SpringLayout.EAST, inputField, -6, SpringLayout.WEST, chatButton);
+		appLayout.putConstraint(SpringLayout.SOUTH, chatButton, -10, SpringLayout.SOUTH, this);
+		appLayout.putConstraint(SpringLayout.EAST, chatButton, -45, SpringLayout.EAST, this);
 		//init the scrollpane
 		checkerButton = new JButton("Check contents");
 		chatScrollPane = new JScrollPane();
@@ -48,7 +52,6 @@ public class ChatPanel extends JPanel
 
 	private void setupScrollPane()
 	{
-		chatScrollPane.setViewportView(chatArea);
 		chatScrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 		chatScrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
 	}
@@ -60,6 +63,8 @@ public class ChatPanel extends JPanel
 		this.add(inputField);
 		this.add(chatScrollPane);
 		this.add(infoLabel);
+		chatArea = new JTextArea(10, 25);
+		add(chatArea);
 		chatArea.setEnabled(false);
 		chatArea.setEditable(false);
 
@@ -67,6 +72,8 @@ public class ChatPanel extends JPanel
 
 	private void setupLayout()
 	{
+		appLayout.putConstraint(SpringLayout.NORTH, chatArea, 10, SpringLayout.NORTH, this);
+		appLayout.putConstraint(SpringLayout.EAST, chatArea, 0, SpringLayout.EAST, inputField);
 
 	}
 
