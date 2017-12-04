@@ -9,6 +9,8 @@ import chat.controller.ChatbotController;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+//Need import for scrollpane
+import javax.swing.JScrollPane;
 
 public class ChatPanel extends JPanel
 {
@@ -18,6 +20,9 @@ public class ChatPanel extends JPanel
 	private JTextField inputField;
 	private JTextArea chatArea;
 	private SpringLayout appLayout;
+	private JScrollPane chatScrollPane;
+	//Need a data member for the scrollpane
+	
 	private JLabel infoLabel;
 
 	public ChatPanel(ChatbotController appController)
@@ -31,25 +36,29 @@ public class ChatPanel extends JPanel
 		inputField = new JTextField(25);
 		infoLabel = new JLabel("Type to chat with the chatbot");
 		appLayout = new SpringLayout();
-		appLayout.putConstraint(SpringLayout.NORTH, chatArea, 41, SpringLayout.NORTH, this);
-		appLayout.putConstraint(SpringLayout.WEST, chatArea, 0, SpringLayout.WEST, inputField);
-		appLayout.putConstraint(SpringLayout.WEST, inputField, 10, SpringLayout.WEST, this);
-		appLayout.putConstraint(SpringLayout.NORTH, inputField, 0, SpringLayout.NORTH, chatButton);
-		appLayout.putConstraint(SpringLayout.SOUTH, chatButton, -10, SpringLayout.SOUTH, this);
-		appLayout.putConstraint(SpringLayout.EAST, chatButton, -10, SpringLayout.EAST, this);
-
+		//init the scrollpane
+		checkerButton = new JButton("Check contents");
+		chatScrollPane = new JScrollPane();
+		//call new helper method
+		setupScrollPane();
 		setupPanel();
 		setupLayout();
 		setupListeners();
 	}
 
+	private void setupScrollPane()
+	{
+		chatScrollPane.setViewportView(chatArea);
+		chatScrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+		chatScrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+	}
 	private void setupPanel()
 	{
 		this.setBackground(Color.CYAN);
 		this.setLayout(appLayout);
 		this.add(chatButton);
 		this.add(inputField);
-		this.add(chatArea);
+		this.add(chatScrollPane);
 		this.add(infoLabel);
 		chatArea.setEnabled(false);
 		chatArea.setEditable(false);
