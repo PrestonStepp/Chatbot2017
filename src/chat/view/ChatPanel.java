@@ -72,8 +72,8 @@ public class ChatPanel extends JPanel
 
 	private void setupLayout()
 	{
-		appLayout.putConstraint(SpringLayout.NORTH, chatArea, 10, SpringLayout.NORTH, this);
-		appLayout.putConstraint(SpringLayout.EAST, chatArea, 0, SpringLayout.EAST, inputField);
+		appLayout.putConstraint(SpringLayout.NORTH, chatScrollPane, 10, SpringLayout.NORTH, this);
+		appLayout.putConstraint(SpringLayout.EAST, chatScrollPane, 0, SpringLayout.EAST, inputField);
 
 	}
 
