@@ -36,6 +36,7 @@ public class ChatPanel extends JPanel
 		inputField = new JTextField(25);
 		infoLabel = new JLabel("Type to chat with the chatbot");
 		appLayout = new SpringLayout();
+		appLayout.putConstraint(SpringLayout.WEST, infoLabel, 10, SpringLayout.WEST, this);
 		appLayout.putConstraint(SpringLayout.NORTH, inputField, 0, SpringLayout.NORTH, chatButton);
 		appLayout.putConstraint(SpringLayout.EAST, inputField, -6, SpringLayout.WEST, chatButton);
 		appLayout.putConstraint(SpringLayout.SOUTH, chatButton, -10, SpringLayout.SOUTH, this);
@@ -64,6 +65,9 @@ public class ChatPanel extends JPanel
 		this.add(chatScrollPane);
 		this.add(infoLabel);
 		chatArea = new JTextArea(10, 25);
+		appLayout.putConstraint(SpringLayout.NORTH, chatArea, 42, SpringLayout.NORTH, this);
+		appLayout.putConstraint(SpringLayout.SOUTH, infoLabel, -6, SpringLayout.NORTH, chatArea);
+		appLayout.putConstraint(SpringLayout.WEST, chatArea, 0, SpringLayout.WEST, inputField);
 		add(chatArea);
 		chatArea.setEnabled(false);
 		chatArea.setEditable(false);
