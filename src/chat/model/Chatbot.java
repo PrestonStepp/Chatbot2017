@@ -126,6 +126,7 @@ public class Chatbot
 			response += followUps[3] + "\n";
 			break;
 		}
+		return response;
 	}
 	
 	public boolean lengthChecker(String input)

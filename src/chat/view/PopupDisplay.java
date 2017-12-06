@@ -6,6 +6,6 @@ public class PopupDisplay
 {
 	public void displayText(String message)
 	{
-		JOptionPane.showMessageDialog(null, message);
+		JOptionPane.showMessageDialog(null, message); 
 	}
 }
