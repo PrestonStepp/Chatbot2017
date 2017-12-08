@@ -33,10 +33,11 @@ public class Chatbot
 		this.followUps = new String [5];
 		
 		buildVerbs();
-//		buildTopics();
-//		buildFollowups();
+		buildTopics();
+		buildFollowups();
 		buildQuestions();
 		buildShoppingList();
+		buildMovieList();
 	}
 
 	private void buildVerbs()
@@ -47,8 +48,20 @@ public class Chatbot
 		verbs[3] = "am thinking about";
 	}
 	
+	private void buildTopics()
+	{
+		
+	}
+	
+	private void buildFollowups()
+	{
+		
+	}
+	
 	private void buildMovieList()
 	{
+		Movie sampleMovie = new Movie("Spider-Man");
+		movieList.add(sampleMovie);
 		
 	}
 	
